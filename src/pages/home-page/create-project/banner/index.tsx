@@ -1,6 +1,8 @@
-export default function NewProjectBanner({ children }: { children: React.ReactNode }) {
+import { cn } from "@/lib/utils";
+
+export default function NewProjectBanner({ children, className }: { children: React.ReactNode, className?: string }) {
   return (
-    <div className="w-full bg-[#f2eaf7] min-h-[40vh]">
+    <div className={cn(null, className)}>
       {children}
     </div>
   )
