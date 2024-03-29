@@ -1,8 +1,9 @@
+import { Input } from "@/components/ui/input";
+
 export default function FilterTextField() {
   return (
-    <input
+    <Input
       type="text"
-      className="outline-none rounded bg-white p-1 border-[#d1d1d1] border focus:bg-white/50 focus:border-blue-300 min-w-[300px]"
       placeholder="Search my projects.."
       name="term"
     />
