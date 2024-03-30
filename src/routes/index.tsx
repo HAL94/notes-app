@@ -2,9 +2,9 @@ import { Suspense, lazy } from "react";
 
 const HomePage = lazy(() => import("@/pages/home-page"));
 const ProjectPage = lazy(() => import("@/pages/project-page"));
-const ProjectEditor = lazy(() => import("@/pages/project-editor"));
-const ProjectTasks = lazy(() => import("@/pages/project-tasks"));
-const ProjectResources = lazy(() => import("@/pages/project-resources"));
+const ProjectEditorPage = lazy(() => import("@/pages/project-editor-page"));
+const ProjectTasksPage = lazy(() => import("@/pages/project-tasks-page"));
+const ProjectResourcesPage = lazy(() => import("@/pages/project-resources-page"));
 
 import { useRoutes } from "react-router-dom";
 import APP_PATHS from "./pathnames";
@@ -31,7 +31,7 @@ export default function Routes() {
           path: "editor",
           element: (
             <Suspense>
-              <ProjectEditor />
+              <ProjectEditorPage />
             </Suspense>
           ),
         },
@@ -39,7 +39,7 @@ export default function Routes() {
           path: "tasks",
           element: (
             <Suspense>
-              <ProjectTasks />
+              <ProjectTasksPage />
             </Suspense>
           ),
         },
@@ -47,7 +47,7 @@ export default function Routes() {
           path: "resources",
           element: (
             <Suspense>
-              <ProjectResources />
+              <ProjectResourcesPage />
             </Suspense>
           ),
         },

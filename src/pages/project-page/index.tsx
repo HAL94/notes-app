@@ -6,8 +6,7 @@ export default function ProjectPage() {
     <div className="w-full flex h-screen">
       <Sidebar />
       <div className="flex-1">
-        <main>
-          content here
+        <main className="h-full">          
           <Outlet />
         </main>
       </div>
